@@ -46,6 +46,16 @@ if (isset($_GET['url'])) //se estiver preenchida, pega o valor
       $controlador = new RegisterResponsible();
       $controlador->registerResponsibleForm();
       break;
+    case "register_student_form":
+      require "controllers/registerStudent.php";
+      $controlador = new RegisterStudent();
+      $controlador->processRequest();
+      break;
+    case "student":
+      require "controllers/student.php";
+      $controlador = new Student();
+      $controlador->processRequest();
+      break;
     default:
       require "controllers/home.php";
       $controlador = new Home();

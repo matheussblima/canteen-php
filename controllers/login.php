@@ -28,8 +28,11 @@ class Login implements IControlador
                         case 'responsible':
                             header('Location:responsible', true, 302);
                             break;
+                        case 'student':
+                            header('Location:student', true, 302);
+                            break;
                         default:
-                            # code...
+                            header('Location:home?is_success_registration=false', true, 302);
                             break;
                     }
                 } else {

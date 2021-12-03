@@ -1,15 +1,15 @@
 <?php
 include_once 'controllers/encrypt.php';
-require_once 'responsibleDAO.php';
+require_once 'studentDAO.php';
 
-class Responsible
+class Student
 {
     private $id;
-    private $idSchool;
-    private $document;
-    private $typeDocument;
+    private $idResponsible;
+    private $registration;
+    private $cpf;
     private $name;
-    private $phone;
+    private $lastName;
     private $email;
     private $password;
 
@@ -23,34 +23,34 @@ class Responsible
         return $this->id;
     }
 
-    public function setIdSchool($idSchool)
+    public function setIdResponsible($idResponsible)
     {
-        $this->idSchool = $idSchool;
+        $this->idResponsible = $idResponsible;
     }
 
-    public function getIdSchool()
+    public function getIdResponsible()
     {
-        return $this->idSchool;
+        return $this->idResponsible;
     }
 
-    public function setDocument($document)
+    public function setRegistration($registration)
     {
-        $this->document = $document;
+        $this->registration = $registration;
     }
 
-    public function getDocument()
+    public function getRegistration()
     {
-        return $this->document;
+        return $this->registration;
     }
 
-    public function setTypeDocument($typeDocument)
+    public function setCpf($cpf)
     {
-        $this->typeDocument = $typeDocument;
+        $this->cpf = $cpf;
     }
 
-    public function getTypeDocument()
+    public function getCpf()
     {
-        return $this->typeDocument;
+        return $this->cpf;
     }
 
     public function setName($name)
@@ -63,14 +63,14 @@ class Responsible
         return $this->name;
     }
 
-    public function setPhone($phone)
+    public function setLastName($lastName)
     {
-        $this->phone = $phone;
+        $this->lastName = $lastName;
     }
 
-    public function getPhone()
+    public function getLastName()
     {
-        return $this->phone;
+        return $this->lastName;
     }
 
     public function setEmail($email)
@@ -93,9 +93,9 @@ class Responsible
         return $this->password;
     }
 
-    public function addResponsible()
+    public function addStudent()
     {
-        $school = new ResponsibleDAO();
-        $school->setResponsible($this);
+        $school = new StudentDAO();
+        $school->setStudent($this);
     }
 }

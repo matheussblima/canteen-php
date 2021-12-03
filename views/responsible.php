@@ -1,3 +1,12 @@
+<?php
+$isSuccessRegistration = false;
+
+if (isset($_GET['is_success_registration'])) {
+    $isSuccessRegistration = strtolower($_GET['is_success_registration']) === 'true' ? true : false;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="Pt-Br">
 
@@ -14,9 +23,29 @@
     <script src="https://kit.fontawesome.com/3d7bdbec83.js" crossorigin="anonymous"></script>
     <script src="js.js"></script>
 
+    <script>
+    $(document).ready(function() {
+        if (<?php echo $isSuccessRegistration ?>) {
+            $('#notification_registration').fadeIn(1000);
+            setTimeout(function() {
+                $('#notification_registration').fadeOut(1000);
+            }, 5000);
+        }
+    });
+    </script>
+
 </head>
 
 <body id="CorDefundo">
+
+    <div class="notification">
+        <div class="container">
+            <div class="alert alert-primary" id="notification_registration" style="display:none;">
+                Cadastro realizado com sucesso
+            </div>
+        </div>
+    </div>
+
 
     <section class="section-top">
         <nav class="navbar navbar-expand-xl navbar-togglable">
@@ -68,39 +97,40 @@
     </div>
     <br>
     <div class="container-fluid">
-        <form id="formulario" method="POST" action="/action_page.php">
+        <form name="register_student_form" method="post" action="register_student_form" class="d-flex">
             <h3>Registrar<h3>
                     <br>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Nome" name="Nome">
+                            <input required type="text" class="form-control" placeholder="Nome" name="name">
                         </div>
                         <div class="col">
-                            <input type="tex" class="form-control" placeholder="Sobrenome" name="Sobrenome">
+                            <input required type="tex" class="form-control" placeholder="Sobrenome" name="lastName">
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col">
-                            <input type="password" class="form-control" placeholder="Senha" name="pswd">
+                            <input required type="password" class="form-control" placeholder="Senha" name="password">
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Email" name="email">
+                            <input required type="text" class="form-control" placeholder="Email" name="email">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="CPF" name="CPF">
+                            <input required type="text" class="form-control" placeholder="CPF" name="cpf">
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Matricula" name="Matricula">
+                            <input required type="text" class="form-control" placeholder="Matricula"
+                                name="registration">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary" type="submit">Enviar</button>
+                    <button class="btn btn-primary" type="submit">Enviar</button>
         </form>
     </div>
     <footer class="footer mt-5 py-5">
