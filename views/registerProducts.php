@@ -1,3 +1,11 @@
+<?php
+$isSuccessRegistration = false;
+
+if (isset($_GET['is_success_registration'])) {
+    $isSuccessRegistration = strtolower($_GET['is_success_registration']) === 'true' ? true : false;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="Pt-Br">
 
@@ -14,10 +22,30 @@
     <script src="https://kit.fontawesome.com/3d7bdbec83.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="js.js">
 
+    <script>
+    $(document).ready(function() {
+        if (<?php echo $isSuccessRegistration ?>) {
+            $('#notification_registration').fadeIn(1000);
+            setTimeout(function() {
+                $('#notification_registration').fadeOut(1000);
+            }, 5000);
+        }
+    });
+    </script>
+
 </head>
 
 <body>
     <section class="section-top">
+
+        <div class="notification">
+            <div class="container">
+                <div class="alert alert-primary" id="notification_registration" style="display:none;">
+                    Cadastro realizado com sucesso
+                </div>
+            </div>
+        </div>
+
         <nav class="navbar navbar-expand-xl navbar-togglable">
             <div class="container-fluid">
                 <div class="logo">
@@ -59,7 +87,8 @@
         <div class="row">
             <div class="col">
                 <div class="col-sm-6 offset-md-3">
-                    <form name="register_products_form" method="post" action="register_products_form">
+                    <form name="register_products_form" method="post" enctype="multipart/form-data"
+                        action="register_products_form">
                         <div class="form-group">
                             <label for="inputProductName">Nome</label>
                             <input required name="name" class="form-control" id="inputProductName"
@@ -93,7 +122,7 @@
                                     <div class="container">
                                         <div class="row justify-content-center">
                                             <div class="col-4">
-                                                <button class="btn btn-primary mt-4" type="submit">Cadastrar</button>
+                                                <button class="btn btn-primary" type="submit">Cadastrar</button>
                                             </div>
                                         </div>
                                     </div>

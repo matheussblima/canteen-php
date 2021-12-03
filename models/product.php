@@ -1,6 +1,6 @@
 <?php
 include_once 'controllers/encrypt.php';
-require_once 'productsDAO.php';
+require_once 'productDAO.php';
 
 class Product
 {

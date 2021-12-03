@@ -51,7 +51,7 @@ class ProductDAO
             $sql->bindParam("name", $name);
             $sql->bindParam("description", $description);
             $sql->bindParam("quantity", $quantity);
-            $sql->bindParam("unitPrice", $unitPrice);
+            $sql->bindParam("unit_price", $unitPrice);
             $sql->bindParam("image", $image);
 
             $sql->execute();

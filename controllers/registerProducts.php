@@ -19,18 +19,22 @@ class RegisterProducts implements IControlador
     public function registerProductsForm()
     {
         try {
-            if (isset($_POST['name']) && isset($_POST['description']) && isset($_POST['price']) && isset($_POST['quantity']) && isset($_POST['image'])) {
 
-                $this->product->setName($_SESSION['name']);
+            if (isset($_POST['name']) && isset($_POST['description']) && isset($_POST['price']) && isset($_POST['quantity']) && isset($_FILES['image'])) {
+
+                $image = $_FILES['image']['tmp_name'];
+                $img = file_get_contents($image);
+
+                $this->product->setName($_POST['name']);
                 $this->product->setDescription($_POST['description']);
                 $this->product->setQuantity($_POST['quantity']);
                 $this->product->setUnitPrice($_POST['price']);
-                $this->product->setImage($_POST['image']);
-
+                $this->product->setImage($img);
 
                 $this->product->addProduct();
             }
-            // header('Location:register_products?is_success_registration=true', true, 302);
+
+            header('Location:register_products?is_success_registration=true', true, 302);
         } catch (string $e) {
             header('Location:register_products?is_success_registration=false', true, 302);
         }
