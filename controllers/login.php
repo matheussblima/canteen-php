@@ -1,23 +1,30 @@
 <?php
 require_once "IControlador.php";
-require_once "models/school.php";
+require_once "models/auth.php";
 
 class Login implements IControlador
 {
-    private $school;
+    private $auth;
 
     public function __construct()
     {
-        $this->school = new School();
+        $this->auth = new Auth();
     }
 
     public function processRequest()
     {
         try {
             if (isset($_POST['email']) && isset($_POST['password'])) {
-                $user = $this->school->loginSchool($_POST['email'], $_POST['password']);
-                if ($user) {
-                    header('Location:canteen', true, 302);
+                $auth = $this->auth->login($_POST['email'], $_POST['password']);
+                if ($auth) {
+                    switch ($auth->getPermission()) {
+                        case 'school':
+                            header('Location:canteen', true, 302);
+                            break;
+                        default:
+                            # code...
+                            break;
+                    }
                 } else {
                     header('Location:home?is_success_login=false', true, 302);
                 }

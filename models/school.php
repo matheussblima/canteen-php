@@ -10,6 +10,7 @@ class School
     private $email;
     private $password;
 
+
     public function setIdSchool($idSchool)
     {
         $this->idSchool = $idSchool;
@@ -52,7 +53,7 @@ class School
 
     public function setPassword($password)
     {
-        $this->password = safeEncrypt($password);
+        $this->password = $password;
     }
 
     public function getPassword()
@@ -70,11 +71,5 @@ class School
     {
         $school = new SchoolDAO();
         return $school->getSchools();
-    }
-
-    public function loginSchool($email, $password)
-    {
-        $school = new SchoolDAO();
-        return $school->loginSchool($email, $password);
     }
 }
