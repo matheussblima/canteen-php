@@ -2,6 +2,7 @@
 require_once 'connection.php';
 include_once 'controllers/encrypt.php';
 include_once 'models/responsible.php';
+include_once 'models/auth.php';
 
 class ResponsibleDAO
 {
@@ -61,7 +62,7 @@ class ResponsibleDAO
             $auth->setEmail($responsible->getEmail());
             $auth->setPassword($responsible->getPassword());
             $auth->setPermission('responsible');
-            $auth->setIdSchool($id);
+            $auth->setIdResponsible($id);
 
             return $auth->setAuth();
         } catch (PDOException $e) {

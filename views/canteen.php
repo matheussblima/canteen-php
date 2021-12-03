@@ -17,94 +17,92 @@
 </head>
 
 <body>
-
-    <body>
-        <section class="section-top">
-            <nav class="navbar navbar-expand-xl navbar-togglable">
-                <div class="container-fluid">
-                    <div class="logo">
-                        <a href="index.html"><img class="navbar-brand-item light-mode-item" src="assets/images/logo.png"
-                                alt="logo"></a>
-                        <h1 class="title-logo"><span>CANTINA</span>WEB</h1>
-                    </div>
-                    <nav>
-                        <input type="checkbox" id="menu-toggle" />
-                        <label for="menu-toggle" class="menu-icon"><i class="fa fa-bars"></i></label>
-                        <div class="slideout-sidebar">
-                            <ul>
-                                <li><a href="Cantina.html">Home</a></li>
-                                <li><a href="Cantina-Responsaveis-Historico.html">Gerenciar Responsáveis</a></li>
-                                <li><a href="Cantina-Produtos-Historico.html"> Gerenciar Produtos</a>
-                                <li><a href="Listagem-Alunos.html">Listagem de Alunos</a></li>
-                                <li><a href="index.html">Sair</a></li>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+    <section class="section-top">
+        <nav class="navbar navbar-expand-xl navbar-togglable">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a href="index.html"><img class="navbar-brand-item light-mode-item" src="assets/images/logo.png"
+                            alt="logo"></a>
+                    <h1 class="title-logo"><span>CANTINA</span>WEB</h1>
                 </div>
-            </nav>
-            <br>
-            <br>
-            <h1 class="Subtitulo_Resp"><span>Cantina</span></h1>
-            <br>
-        </section>
-        <hr>
-        <hr>
-        <div class="jumbotron">
-            <h1></h1>
-            <h5>Este é a área da cantina onde os funcionários podem realizar o gerenciamento
-                dos materiais da cantina e dos responsáveis.
-            </h5>
-        </div>
-        </div>
-        <hr>
-        <br>
-        <form>
-            <div class="row">
-                <div class="col positionButtons">
-                    <div class="buttonAddProdutos form-check-inline">
-                        <div class="iconeAddProdutos">
-                            <img src="assets/images/icon_plus.svg" alt="+" />
-                        </div>
-                        <div class="textStyle">
-                            <p><a href="Cadastro-Produtos.html">Cadastrar Produtos</a></p>
-                        </div>
+                <nav>
+                    <input type="checkbox" id="menu-toggle" />
+                    <label for="menu-toggle" class="menu-icon"><i class="fa fa-bars"></i></label>
+                    <div class="slideout-sidebar">
+                        <ul>
+                            <li><a href="Cantina.html">Home</a></li>
+                            <li><a href="Cantina-Responsaveis-Historico.html">Gerenciar Responsáveis</a></li>
+                            <li><a href="Cantina-Produtos-Historico.html"> Gerenciar Produtos</a>
+                            <li><a href="Listagem-Alunos.html">Listagem de Alunos</a></li>
+                            <li><a href="index.html">Sair</a></li>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="buttonAddProdutos form-check-inline">
-                        <div class="iconeAddProdutos">
-                            <img src="assets/images/icon_plus.svg" alt="+" />
-                        </div>
-                        <div class="textStyle">
-                            <p><a href="Cadastro-Responsavel.html">Cadastrar Responsáveis</a></p>
-                        </div>
+                </nav>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <h1 class="Subtitulo_Resp"><span>Cantina</span></h1>
+        <br>
+    </section>
+    <hr>
+    <hr>
+    <div class="jumbotron">
+        <h1></h1>
+        <h5>Este é a área da cantina onde os funcionários podem realizar o gerenciamento
+            dos materiais da cantina e dos responsáveis.
+        </h5>
+    </div>
+    </div>
+    <hr>
+    <br>
+    <form>
+        <div class="row">
+            <div class="col positionButtons">
+                <div class="buttonAddProdutos form-check-inline">
+                    <div class="iconeAddProdutos">
+                        <img src="assets/images/icon_plus.svg" alt="+" />
+                    </div>
+                    <div class="textStyle">
+                        <p><a href="Cadastro-Produtos.html">Cadastrar Produtos</a></p>
+                    </div>
+                </div>
+                <div class="buttonAddProdutos form-check-inline">
+                    <div class="iconeAddProdutos">
+                        <img src="assets/images/icon_plus.svg" alt="+" />
+                    </div>
+                    <div class="textStyle">
+                        <p><a href="register_responsible">Cadastrar Responsáveis</a></p>
                     </div>
                 </div>
             </div>
-        </form>
-        <br>
-        <br>
-        <footer class="footer mt-5 py-5">
-            <div class="containerfoot">
-                <div class="row justify-content-center">
-                    <div class="col-4">
-                        <h4 class="footer-title">
-                            Endereço
-                        </h4>
-                        <h6 class="footer-title">
-                            Rua x, numero 39
-                        </h6>
-                    </div>
-                    <div class="col-4">
-                        <h4 class="footer-title">
-                            Fale conosco
-                        </h4>
-                        <h6 class="footer-title">
-                            (71) 99999-9999
-                        </h6>
-                    </div>
+        </div>
+    </form>
+    <br>
+    <br>
+    <footer class="footer mt-5 py-5">
+        <div class="containerfoot">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <h4 class="footer-title">
+                        Endereço
+                    </h4>
+                    <h6 class="footer-title">
+                        Rua x, numero 39
+                    </h6>
+                </div>
+                <div class="col-4">
+                    <h4 class="footer-title">
+                        Fale conosco
+                    </h4>
+                    <h6 class="footer-title">
+                        (71) 99999-9999
+                    </h6>
                 </div>
             </div>
-        </footer>
-    </body>
+        </div>
+    </footer>
+</body>
 
 </html>

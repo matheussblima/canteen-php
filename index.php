@@ -31,6 +31,21 @@ if (isset($_GET['url'])) //se estiver preenchida, pega o valor
       $controlador = new Canteen();
       $controlador->processRequest();
       break;
+    case "responsible":
+      require "controllers/responsible.php";
+      $controlador = new Responsible();
+      $controlador->processRequest();
+      break;
+    case "register_responsible":
+      require "controllers/registerResponsible.php";
+      $controlador = new RegisterResponsible();
+      $controlador->processRequest();
+      break;
+    case "register_responsible_form":
+      require "controllers/registerResponsible.php";
+      $controlador = new RegisterResponsible();
+      $controlador->registerResponsibleForm();
+      break;
     default:
       require "controllers/home.php";
       $controlador = new Home();
