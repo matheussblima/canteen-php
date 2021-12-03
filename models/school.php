@@ -1,6 +1,6 @@
 <?php
 include_once 'controllers/encrypt.php';
-require_once 'SchoolDAO.php';
+require_once 'schoolDAO.php';
 
 class School
 {

@@ -65,7 +65,7 @@
                         <img src="assets/images/icon_plus.svg" alt="+" />
                     </div>
                     <div class="textStyle">
-                        <p><a href="Cadastro-Produtos.html">Cadastrar Produtos</a></p>
+                        <p><a href="register_products">Cadastrar Produtos</a></p>
                     </div>
                 </div>
                 <div class="buttonAddProdutos form-check-inline">
