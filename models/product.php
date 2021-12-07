@@ -81,5 +81,15 @@ class Product
     {
         $product = new ProductDAO();
         return $product->getProducts();
+    }    
+
+    public function getProducts(){
+        $productDAO = new ProductDAO();
+        return $productDAO->getProducts();
+    }
+
+    public function deleteProduct($id){
+        $productDAO = new ProductDAO();
+        return $productDAO->deleteProduct($id);
     }
 }

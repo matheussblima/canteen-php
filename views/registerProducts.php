@@ -59,7 +59,7 @@ if (isset($_GET['is_success_registration'])) {
                     <div class="slideout-sidebar">
                         <ul>
                             <li><a href="Cantina.html">Home</a></li>
-                            <li><a href="Cantina-Produtos-Historico.html">Gerenciamento de Produtos</a></li>
+                            <li><a href="list_products">Gerenciamento de Produtos</a></li>
                             <li><a href="Cantina-Responsaveis-Historico.html">Gerenciamento de Responsaveis</a></li>
                             <li><a href="index.html">Sair</a></li>
                             </li>
@@ -70,19 +70,17 @@ if (isset($_GET['is_success_registration'])) {
         </nav>
         <br>
         <br>
-        <h1 class="Subtitulo_Resp"><span>Cantina</span></h1>
+        <h1 class="Subtitulo_Resp"><span>Cadastro de Produtos</span></h1>
         <br>
     </section>
-    <hr>
-    <hr>
+    <br>
     <div class="jumbotron">
         <h1></h1>
-        <h5>Este é a área onde os funcionários podem realizar o cadastro
-            dos produtos fornecidos pela cantina no Estoque.
+        <h5>Realize o cadastro de novos produtos para ficarem disponíveis na sua cantina !
         </h5>
     </div>
     </div>
-    <hr>
+    <br>
     <section>
         <div class="row">
             <div class="col">

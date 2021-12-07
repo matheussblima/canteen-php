@@ -32,7 +32,7 @@
                         <ul>
                             <li><a href="Cantina.html">Home</a></li>
                             <li><a href="Cantina-Responsaveis-Historico.html">Gerenciar Responsáveis</a></li>
-                            <li><a href="Cantina-Produtos-Historico.html"> Gerenciar Produtos</a>
+                            <li><a href="list_products"> Gerenciar Produtos</a>
                             <li><a href="Listagem-Alunos.html">Listagem de Alunos</a></li>
                             <li><a href="index.html">Sair</a></li>
                             </li>

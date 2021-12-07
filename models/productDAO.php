@@ -25,7 +25,7 @@ class ProductDAO
                 $product->setDescription($items['description']);
                 $product->setQuantity($items['quantity']);
                 $product->setUnitPrice($items['unit_price']);
-                $product->setImage($items['unit_price']);
+                $product->setImage($items['image']);
                 array_push($products, $product);
             }
             return $products;
@@ -62,4 +62,25 @@ class ProductDAO
             return false;
         }
     }
+
+    public function deleteProduct($id){
+        
+        try{
+            $connection = Connection::getConexao();
+
+            $query = "delete from products where id = :id";
+            $sql = $connection->prepare($query);
+
+            $sql->bindParam("id", $id);
+
+            $sql->execute();
+
+            return true;
+
+        } catch (PDOException $e) {
+            echo $e;
+            return false;
+        }
+    }
+
 }

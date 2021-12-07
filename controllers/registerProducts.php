@@ -32,6 +32,7 @@ class RegisterProducts implements IControlador
                 $this->product->setImage($img);
 
                 $this->product->addProduct();
+                
             }
 
             header('Location:register_products?is_success_registration=true', true, 302);

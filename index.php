@@ -66,6 +66,15 @@ if (isset($_GET['url'])) //se estiver preenchida, pega o valor
       $controlador = new RegisterProducts();
       $controlador->registerProductsForm();
       break;
+    case "list_products":
+      require"controllers/listProducts.php";
+      $controlador = new ListProducts();
+      $controlador->processRequest();
+      break;
+    case "delete_product";
+      require"controllers/deleteProduct.php";
+      $controlador = new DeleteProduct();
+      $controlador->processRequest();
     default:
       require "controllers/home.php";
       $controlador = new Home();
