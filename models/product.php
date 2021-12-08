@@ -92,4 +92,14 @@ class Product
         $productDAO = new ProductDAO();
         return $productDAO->deleteProduct($id);
     }
+
+    public function editProduct(){
+        $productDAO = new ProductDAO();
+        return $productDAO->editProduct($this);
+    }
+
+    public function getProductById($id){
+        $productDAO = new ProductDAO();
+        return $productDAO->getProductById($id);
+    }
 }

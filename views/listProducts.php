@@ -70,9 +70,8 @@
            <td><?php echo $productList[$i]->getQuantity(); ?></td>
            <td><?php echo $productList[$i]->getUnitPrice(); ?></td>
            <td> 
-          <a href="#" style="background-color:black;"><i class="fas fa-edit"></i></a>
+          <a href="edit_product?id=<?php echo $productList[$i]->getId(); ?>" style="background-color:black;"><i class="fas fa-edit"></i></a>
           <a href="delete_product?id=<?php echo $productList[$i]->getId(); ?>" style="background-color:black;" ><i class="fas fa-user-minus"></i></a>
-          <a href="#" style="background-color:black;"><i class="fas fa-wallet"></i>
         </td></a>
            <td>
            </td>
